@@ -60,6 +60,7 @@ public class App {
 			else if(car.getStatus()==2){
 				disp.drawLine(car.getLocation(),car.getStart());
 			}
+			disp.update();
 			// if car is not idle,
 			// if OnTrip, draw line from current location to drop point
 			// else from current location to destination.

@@ -18,6 +18,11 @@ public abstract class Display {
 		app = a;
 	}
 
+	public void update() {
+
+
+	}
+
 	// v3 - added
 	// Will be called by app at init time - and before call to any other display method
 	// Derived call can override this and do any initialization needed
