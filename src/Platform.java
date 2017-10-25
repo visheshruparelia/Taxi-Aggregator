@@ -25,13 +25,16 @@ public class Platform {
 		Car nearestCar=null;
 		for(int i=0;i<size;i++){
 			Car c=fleetList.get(i).findNearestCar(trip.getStart());
-			int dist=c.distSqrd(trip.getStart());
-			if(dist<min && c.getStatus()==1){
+			if(c!=null){
+				int dist=c.distSqrd(trip.getStart());
+				if(dist<min && c.getStatus()==1){
 				min=dist;
 				nearestCar=c;
+				}
 			}
 		}
-		nearestCar.assignTrip(trip);
+		if(nearestCar!=null)
+			nearestCar.assignTrip(trip);
 		return nearestCar;
 	}
 
